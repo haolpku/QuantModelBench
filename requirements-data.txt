@@ -1,0 +1,2 @@
+# Optional client for downloading authorized dataset components.
+huggingface-hub>=0.34,<2

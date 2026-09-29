@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "task_b_selection_response.schema.json",
+  "title": "Task B frozen-code candidate selection response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["selected_revision", "selection_reason"],
+  "properties": {
+    "selected_revision": {"type": "integer", "minimum": 0, "maximum": 20},
+    "selection_reason": {"type": "string", "minLength": 1, "maxLength": 2000}
+  }
+}

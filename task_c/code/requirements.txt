@@ -1,0 +1,2 @@
+# Task C installs the repository-wide frozen runtime; see ../../requirements.txt.
+-r ../../requirements.txt

@@ -1,0 +1,32 @@
+name: Offline smoke checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      NUMEXPR_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements-smoke.txt
+      - run: python -m pip install -r requirements-smoke.txt
+      - run: python scripts/check_release.py
+      - run: bash -n task_c/code/scripts/run_task_c_baselines_split.sh
+      - run: bash -n task_c/code/scripts/run_task_c_baselines_parallel.sh
+      - run: python task_b/code/scripts/smoke_task_b.py
+      - run: python task_c/code/scripts/smoke_task_c.py
+      - run: python scripts/download_data.py --component task-b-semantic task-c-semantic --dry-run

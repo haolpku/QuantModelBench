@@ -1,0 +1,4 @@
+# Nothing is optional at the moment.  `optuna` used to live here as a Bayesian
+# hyperparameter backend for the archived Task A baseline optimizer; the sandbox
+# import whitelist (shared/agentic/tools.py) now allows generated code to import
+# it, so it is a hard dependency declared in requirements.txt instead.

@@ -1,0 +1,15 @@
+# Unique Task B case IDs listed in the first category of high_level_case.md.
+# These IDs are from the USA frozen rolling dev manifest.
+case_89272f1eec8ed694
+case_c1a23bbc0cd4846e
+case_a823974292fa2763
+case_f3c929ca0d8c8568
+case_17ea3fd0d6c77951
+case_9acd994e13b9de36
+case_12d79b3fbbbc8894
+case_f7b57a411f5ef703
+case_55f85b35e002a4e0
+case_d8b82844555812e0
+case_f192130a0e719acd
+case_35a92c1683fee132
+case_71148d1d0e95e43b

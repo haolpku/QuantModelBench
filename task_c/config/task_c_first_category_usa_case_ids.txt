@@ -1,0 +1,14 @@
+# high_level_case.md 第一类中的 Task C USA dev cases（去重后 13 个）
+c_case_24415ff257daf3a7
+c_case_ee9214d268832161
+c_case_cfce3735f39f1b16
+c_case_9dfd8331388eb0fd
+c_case_a64ff7d892218d20
+c_case_2f8be9bd39153a49
+c_case_43b1011ca580ae58
+c_case_860d0dc401da0b55
+c_case_81ee6137bfd1b235
+c_case_ce49a6caee3fde85
+c_case_f59cebbf88cdd08a
+c_case_ae2fae9ab36ffceb
+c_case_01843ff0421e37d8

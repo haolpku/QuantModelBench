@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "task_c_code_response.schema.json",
+  "title": "Task C generated model source response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "revision",
+    "status",
+    "language",
+    "code",
+    "entrypoint",
+    "requirements",
+    "input_contract",
+    "output_contract",
+    "explanation",
+    "revision_summary"
+  ],
+  "properties": {
+    "revision": {"type": "integer", "minimum": 0, "maximum": 20},
+    "status": {"type": "string", "enum": ["candidate", "final"]},
+    "language": {"type": "string", "const": "python"},
+    "code": {"type": "string", "minLength": 20, "maxLength": 120000},
+    "entrypoint": {"type": "string", "const": "fit_and_predict"},
+    "requirements": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+$"}
+    },
+    "input_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["train_columns", "validation_columns", "predict_columns"],
+      "properties": {
+        "train_columns": {"type": "array", "items": {"type": "string"}},
+        "validation_columns": {"type": "array", "items": {"type": "string"}},
+        "predict_columns": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "output_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["columns", "one_row_per_id"],
+      "properties": {
+        "columns": {"type": "array", "items": {"type": "string"}},
+        "one_row_per_id": {"type": "boolean"}
+      }
+    },
+    "explanation": {"type": "string", "maxLength": 2000},
+    "revision_summary": {"type": "string", "maxLength": 1000}
+  }
+}

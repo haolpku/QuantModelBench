@@ -1,0 +1,44 @@
+# Restricted datasets and generated experiment artifacts
+/data/*
+!/data/README.md
+/task_b/runs/
+/task_c/runs/
+/task_bc_eval/outputs*/
+/outputs/
+/results/
+/logs/
+/.tmp/
+/.cache/
+/archive/
+*.parquet
+*.pkl
+*.pickle
+*.tar
+*.tar.gz
+*.zip
+*.log
+*.pid
+
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+*.env
+*.key
+*.pem
+credentials.json
+
+# Python and editor state
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.DS_Store
+.idea/
+.vscode/
